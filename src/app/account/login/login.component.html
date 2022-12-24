@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-5">
+      <div class="card shadow-lg border-0 rounded-lg mt-5">
+        <div class="card-header">
+          <h3 class="text-center font-weight-light my-4">Giriş Yap</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+              <label class="small mb-1">Email</label>
+              <input class="form-control py-4" formControlName="email" type="email" placeholder="name@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label class="small mb-1" >Parola</label>
+              <input class="form-control py-4" formControlName="password" type="password" placeholder="*********" />
+            </div>
+
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" id="rememberPasswordCheck" type="checkbox" />
+                <label class="custom-control-label" for="rememberPasswordCheck">Remember
+                  password</label>
+              </div>
+            </div>
+
+            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+              <a class="small" routerLink="/account/forgot-password">Forgot Password?</a>
+              <a class="btn btn-primary" (click)="login()">Giriş Yap</a>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <div class="small"><a routerLink="/account/register">Need an account? Sign up!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <body class="text-center">
+  <main class="form-signin">
+    <form [formGroup]="loginForm">
+      <h1 class="h3 mb-3 fw-normal">Giriş yap</h1>
+
+      <div class="form-floating">
+        <input formControlName="email" type="email" class="form-control" id="floatingInput"
+          placeholder="name@example.com" />
+        <label for="floatingInput">E-posta</label>
+      </div>
+      <div class="form-floating">
+        <input formControlName="password" type="password" class="form-control" id="floatingPassword"
+          placeholder="Password" />
+        <label for="floatingPassword">Parola</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" (click)="login()">
+        Giriş yap
+      </button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>
+  </main>
+</body> -->
